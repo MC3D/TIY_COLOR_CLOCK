@@ -33,7 +33,7 @@
     i = percentage * 3.6;
 
     if(percentage === 0) {
-      progressBar.style.backgroundImage = 'linear-gradient(' + (360-90) + 'deg, transparent 50%, #39B4CC 50%),linear-gradient(90deg, #fff 50%, transparent 50%)';
+      progressBar.style.backgroundImage = 'linear-gradient(' + (360-89) + 'deg, transparent 50%, #39B4CC 50%),linear-gradient(91deg, #fff 50%, transparent 50%)';
     } else if(percentage < 50) {
       progressBar.style.backgroundImage = 'linear-gradient(' + (90+i) + 'deg, transparent 50%, #fff 50%),linear-gradient(90deg, #fff 50%, transparent 50%)';
     } else {
