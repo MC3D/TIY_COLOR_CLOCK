@@ -1,11 +1,11 @@
 .container
 {
+    font-family: sans-serif;
+
     display: -webkit-flex;
     display:         flex;
 
     height: 100vh;
-
-    font-family: sans-serif;
 
     -webkit-flex-direction: row /* works with row or column */
     flex-direction: row;
@@ -15,13 +15,24 @@
             justify-content: center;
 }
 
+.color-clock {
+  position: relative;
+  top: -28px;
+}
+
+.clock {
+  background: #fff;
+}
+
 .color-clock > h1:first-child
 {
     position: relative;
+    top: -28px;
 }
 
-.clock span {
-  font-size: 50px;
+.clock span
+{
+    font-size: 50px;
 }
 
 .color-clock > div:nth-child(2n)
@@ -33,7 +44,7 @@
     height: 425px;
 
     border-radius: 50%;
-    background-color: #39b4cc;
+    background-color: #a9a9a9;
     /*background-image: linear-gradient(91deg, transparent 50%, #a2ecfb 50%),
     linear-gradient(90deg, #a2ecfb 50%, transparent 50%);*/
 
@@ -55,7 +66,6 @@
 
     color: #fff;
     border-radius: 50%;
-    /*background-color: red;*/
 
     -webkit-flex-direction: row /* works with row or column */
     flex-direction: row;
