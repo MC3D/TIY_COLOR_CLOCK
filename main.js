@@ -62,16 +62,16 @@
   }
 
   function colorLuminance(hex, lum) {
-    hex = String(hex).replace(/[^0-9a-f]/gi, ''); // pattern is enclosed between forward slashes; [^0-9a-f] matches anything that is not enclosed in the brackets (matches anything that is not 0-9 are a-f); g is a regular expression flag (global search - meaning it will match all occurrences); i is a regular expression flag (case-insensitive search); replace what you find with '' (basically, remove it)
+    hex = String(hex).replace(/[^0-9a-f]/gi, '');
     if (hex.length < 6) {
-      hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]; // will extend 3 digit hex code to 6 digits (e.g. #fff --> #ffffff)
+      hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
     }
     lum = lum || 0;
     // convert to decimal
     var hexNew = '#',
       c;
     for (var i = 0; i < 3; i++) {
-      c = parseInt(hex.substr(i * 2, 2), 16); // parseInt() function parses a string argument and returns an integer of the specified radix; radix is 16 (hexadecimal)
+      c = parseInt(hex.substr(i * 2, 2), 16);
       c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
       hexNew += ('00' + c).substr(c.length);
     }
@@ -87,9 +87,6 @@
     isHovering = false;
   });
 
-  // clock.style.backgroundColor = colors[0];
-
-  // window.setInterval(changeBackgroundColor, 100);
   window.setInterval(start, 1000);
 
 }());
